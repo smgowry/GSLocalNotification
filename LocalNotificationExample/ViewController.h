@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+- (IBAction)stopButtonPreesed:(UIButton *)sender;
 
 
 @end

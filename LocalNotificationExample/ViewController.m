@@ -23,5 +23,21 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:YES];
+    UILocalNotification* localNotification = [[UILocalNotification alloc]init];
+    
+    if (localNotification) {
+        localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:10];
+        localNotification.alertBody = @"Hi this is my first local notification!!!";
+        //localNotification.timeZone = [NSTimeZone defaultTimeZone];
+    }
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
 
+    
+}
+
+- (IBAction)stopButtonPreesed:(UIButton *)sender {
+    exit(0);
+}
 @end
