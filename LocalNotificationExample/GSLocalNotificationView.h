@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface GSLocalNotificationView : UIViewController
+
 - (IBAction)stopButtonPreesed:(UIButton *)sender;
 
 

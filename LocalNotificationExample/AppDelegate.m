@@ -16,10 +16,16 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [[UINavigationBar appearance]setBarTintColor:[UIColor colorWithRed:95.0/255.0 green:219.0/255.0 blue:208.0/255.0 alpha:1.0f]];
+    [[UIToolbar appearance]setBarTintColor:[UIColor colorWithRed:95.0/255.0 green:219.0/255.0 blue:208.0/255.0 alpha:1.0f]];
+    [[UIToolbar appearance]setTranslucent:NO];
+    
+    
+    
     UIUserNotificationType types = UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
     UIUserNotificationSettings *mySettings = [UIUserNotificationSettings settingsForTypes:types categories:nil];
     [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
+    
     return YES;
 }
 

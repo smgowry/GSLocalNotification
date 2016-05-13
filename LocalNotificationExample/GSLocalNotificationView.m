@@ -6,26 +6,24 @@
 //  Copyright (c) 2015 Gowrie Sammandhamoorthy. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "GSLocalNotificationView.h"
 
-@interface ViewController ()
+@interface GSLocalNotificationView ()
 
 @end
 
-@implementation ViewController
+@implementation GSLocalNotificationView
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:YES];
-    UILocalNotification* localNotification = [[UILocalNotification alloc]init];
+    
+    UILocalNotification* localNotification = [UILocalNotification new];
     
     if (localNotification) {
         localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:10];
@@ -40,4 +38,6 @@
 - (IBAction)stopButtonPreesed:(UIButton *)sender {
     exit(0);
 }
+
+
 @end
